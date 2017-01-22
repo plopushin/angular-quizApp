@@ -8,7 +8,24 @@
 		function ListController() {
 			//vm = view model
 			var vm = this;
+
 			vm.data = turtlesData;
+			vm.activeTurtle = {};
+            vm.changeActiveTurtle = changeActiveTurtle;
+            vm.activateQuiz = activateQuiz;
+            vm.search = "";
+			vm.quizActive = false; //doesn't use at first
+
+            //METHODS
+			
+			function changeActiveTurtle(index){
+				//set active turtle to info in current index
+				vm.activeTurtle = index;
+			}
+
+            function activateQuiz(){
+                vm.quizActive = true;
+            }
 		}
 
 		var turtlesData = [
