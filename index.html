@@ -92,26 +92,51 @@
 						</div>
 					</div>
 			</div>
-		</div> <!-- List Controller -->
+		</div> 
+	</div><!-- List Controller -->
 
 		<!-- For quiz --> 
 		<!-- In Angular, controllers cannot talk to one another --> 
 		<!-- Services to communicate between controllers --> 
 		<!-- FACTORY --> 
-		<div ng-controller="quizCtrl as quiz" ng-show="quiz.quizMetrics.quizActive">
+		<div ng-controller="quizCtrl as quiz" 
+			 ng-show="quiz.quizMetrics.quizActive">
 			<div class="row">
 				<div class="col-xs-8">
-					<h2>Progress:</h2>
+					<h4>Progress:</h4>
 					<div class="btn-toolbar">
 						<button class="btn"
-							ng-repeat="question in quiz.dataService.quizQuestions">
+							ng-repeat="question in quiz.dataService.quizQuestions"
+							ng-class="{'btn-info': question.selected !== null, 'btn-danger': question.selected === null}">
+								<span class="glyphicon"
+									ng-class="{'glyphicon-pencil': question.selected !==null, 'glyphicon-quesiton-sign': question.selected === null}"></span>
+
 						</button>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="row">
+						<h4>Legend:</h4>
+						<div class="col-sm-4">
+							<button class="btn btn-danger">
+								<span class="glyphicon glyphicon-question-sign"></span>
+							</button>
+							<p>Unanswered</p>
+						</div>
+					</div>
+				</div>
+			</div><!-- progress area -->
+			<div class="row">
+				<h3>Question</h3>
+				<div class="well well-sm">
+					<div class="row">
+						<div class="col-xs-12">
+							<h4>{{}}</h4>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	
-	</div>
 	</div>
 	
 	<!-- third party js -->
