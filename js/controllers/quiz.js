@@ -11,6 +11,40 @@
 
 			vm.quizMetrics = quizMetrics;
 			vm.dataService = DataService;
+			vm.activeQuestion = 0; //default set to zero
+			vm.questionAnswered = questionAnswered;
+			vm.setActiveQuestion = setActiveQuestion;
+			
+			var numQuestionsAnswered = 0;
+
+			function setActiveQuestion() {
+				var breakOut = false;
+				//-1 as 0 index and referencing the active question
+				var quizLength = DataService.quizQuestions.length -1;
+
+				while(!breakOut) {
+					vm.activeQuestion = vm.activeQuestion < quizLength?++vm.activeQuestion:0;
+
+					if(DataService.quizQuestions[vm.activeQuestion].selected === null) {
+						breakOut = true;
+					}
+				}
+			}
+
+			function questionAnswered(){
+
+				var quizLength = DataService.quizQuestions.length;
+
+				if(DataService.quizQuestions[vm.activeQuestion].selected !== null){
+					numQuestionsAnswered++;
+					//check for all questions answered
+					if(numQuestionsAnswered >= quizLength) {
+						//finalize the quiz. 
+					}
+				}
+
+				vm.setActiveQuestion();
+			}
 			
 		}
 })();
