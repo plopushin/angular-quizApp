@@ -195,6 +195,8 @@
 							ng-repeat="question in results.dataService.quizQuestions"
 							ng-class="{'btn-success': question.correct, 'btn-danger': !question.correct}"
 							ng-click="results.setActiveQuestion($index)">
+							<span class="glyphicon" ng-class="{'glyphicon-ok': question.correct, 'glyphicon-remove': !question.correct}">
+							</span>
 						</button>
 					</div>
 				</div>
