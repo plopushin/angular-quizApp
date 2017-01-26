@@ -1,0 +1,23 @@
+{
+  "name": "AngularJS-Fish-Quiz",
+  "version": "1.0.0",
+  "private": false,
+  "author": "Paul Lopushinsky",
+  "devDependencies": {},
+  "engines": {
+    "node": "5.1.0",
+    "npm": "3.4.1"
+  },
+  "scripts": {
+    "test": "grunt test",
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+    "bower": "1.7.1",
+    "express": "^4.13.3",
+    "gzippo": "^0.2.0"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ]
+}
