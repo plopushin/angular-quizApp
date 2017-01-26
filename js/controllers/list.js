@@ -28,7 +28,7 @@
 
             function activateQuiz(){
                 //take what is passed in ListController
-                quizMetrics.changeState(true);
+                quizMetrics.changeState("quiz", true);
             }
 		}
 
