@@ -28,7 +28,7 @@
 		<!-- tells angular what controller controls the div -->
 		<!-- list for a-->
 		<!-- ng-hide-->
-		<div ng-controller="listCtrl as list" ng-hide="list.quizMetrics.quizActive">
+		<div ng-controller="listCtrl as list" ng-hide="list.quizMetrics.quizActive || list.quizMetrics.resultsActive">
 			<!-- {{}} angular binding description -->
 			<!-- ng repeat -> repeat markup for all -->
 			<form class="form=inline well well-sm clearfix">
@@ -184,8 +184,13 @@
 					</div>
 				</div>
 
-			</div>
+			</div><!-- question row -->
+		</div><!-- quiz controller -->
+		<div ng-controller="resultsCtrl as results" ng-show="results.quizMetrics.resultsActive">
+			<h1>Hello world</h1>
 		</div>
+
+
 	</div>
 	
 	<!-- third party js -->
@@ -197,6 +202,7 @@
     <script src="js/app.js"></script>
     <script src="js/controllers/list.js"></script>
     <script src="js/controllers/quiz.js"></script>
+    <script src="js/controllers/results.js"></script>
     <script src="js/factories/quizMetrics.js"></script>
     <script src="js/factories/dataService.js"></script>
 
