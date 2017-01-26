@@ -82,7 +82,7 @@
             text: "Which of these is the Green Turtle?",
             possibilities: [
                 {
-                    answer: "http://www.what-do-turtles-eat.com/wp-content/uploads/2014/10/Sea-Turtles-Habitat.jpg"
+                    answer: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Green_turtle_swimming_in_Kona_May_2010.jpg/1024px-Green_turtle_swimming_in_Kona_May_2010.jpg"
                 },
                 {
                     answer: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Kemp's_Ridley_sea_turtle_nesting.JPG"
@@ -222,7 +222,7 @@
     var turtlesData = [
         {
             type: "Green Turtle",
-            image_url: "http://www.what-do-turtles-eat.com/wp-content/uploads/2014/10/Sea-Turtles-Habitat.jpg",
+            image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Green_turtle_swimming_in_Kona_May_2010.jpg/1024px-Green_turtle_swimming_in_Kona_May_2010.jpg",
             locations: "Tropical and subtropical oceans worldwide",
             size: "Up to 1.5m and up to 300kg",
             lifespan: "Over 80 years",
