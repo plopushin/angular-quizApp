@@ -14,6 +14,7 @@
 			vm.setActiveQuestion = setActiveQuestion;
 			vm.calculatePerc = calculatePerc;
 			vm.activeQuestion = 0;
+			vm.reset = reset;
 
 			function calculatePerc(){
 				return quizMetrics.numCorrect / DataService.quizQuestions.length * 100;
@@ -28,6 +29,18 @@
 					return "bg-success";
 				} else if (index ===DataService.quizQuestions[vm.activeQuestion].selected){
 					return "bg-danger";
+				}
+			}
+			//set everything back to base
+			function reset (){
+				quizMetrics.changeState("results", false);
+				quizMetrics.numCorrect = 0;
+
+				for(var i = 0; i < DataService.quizQuestions.length; i++) {
+					var data =DataService.quizQuestions[i];
+
+					data.selected = null;
+					data.correct = null;
 				}
 			}
 		}
