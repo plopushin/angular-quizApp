@@ -31,7 +31,7 @@
 		<div ng-controller="listCtrl as list" ng-hide="list.quizMetrics.quizActive || list.quizMetrics.resultsActive">
 			<!-- {{}} angular binding description -->
 			<!-- ng repeat -> repeat markup for all -->
-			<form class="form=inline well well-sm clearfix">
+			<form class="form-inline well well-sm clearfix">
 				<span class="glyphicon glyphicon-search"></span>
 				<input type="text" placeholder="Search..." class="form-control"
 				ng-model="list.search">
@@ -100,6 +100,7 @@
 		<!-- In Angular, controllers cannot talk to one another --> 
 		<!-- Services to communicate between controllers --> 
 		<!-- FACTORY --> 
+		<div class="container">
 		<div ng-controller="quizCtrl as quiz" 
 			 ng-show="quiz.quizMetrics.quizActive">
 			<div class="row">
@@ -133,7 +134,7 @@
 						</div>
 					</div>
 				</div>
-
+		
 			</div><!-- progress area -->
 			<div class="row">
 			<div class="alert alert-danger"
@@ -265,7 +266,7 @@
 			</div>
 		</div>
 
-
+</div>
 	</div>
 	
 	<!-- third party js -->
